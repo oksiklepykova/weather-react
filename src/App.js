@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <div class="container">
       <h1>Weather App</h1>  
       <Weather />
       <footer>
@@ -14,6 +15,7 @@ function App() {
         from{" "}
         <a href="http://shecodes.io" target="_blank" rel="noreferrer">She Codes</a>
       </footer>
+      </div>
     </div>
     
   );
