@@ -1,9 +1,42 @@
-import React, { useState } from "react";
-import axios from 'axios';
+import React from "react";
+//import axios from 'axios';
 import './Weather.css';
 
-export default function WeatherSearch() {
-    const [city, setCity] = useState("");
+export default function Weather() {
+    return (
+        <div className="Weather">
+            <form>
+               <div className="row">
+                  <div className="col-9">
+                      <input type="search" 
+                             placeholder="Enter a city.." 
+                             className="form-control" />
+                  </div>
+                  <div className="col-3">
+                       <button type="Submit" value="Search" className="btn btn-primary">Search</button>
+                  </div>
+               </div>
+            </form>
+            <h1>Lviv</h1>
+            <ul>
+                <li>Thursday 11:00</li>
+                <li>Mostly Cloudy</li>
+            </ul>
+            <div className="row">
+               <div className="col-6">
+                  <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Mostly Cloudy" />
+                  5°C
+               </div>
+               <div className="col-6">
+                   <ul>
+                      <li>Humidity: 72%</li>
+                      <li>Wind: 14 km/h</li>
+                   </ul>
+               </div>
+            </div>
+        </div>
+    )
+ /*   const [city, setCity] = useState("");
     const [loaded, setLoaded] = useState(false);
     const [weather, setWeather] = useState({});
 
@@ -35,9 +68,9 @@ export default function WeatherSearch() {
         </form>
     );
 
-    if (loaded) {
+    if (loaded) {  
         return (
-            <div>
+            <div className="Weather">
                 {form}
                 <ul>
                     <li>Temperature: {Math.round(weather.temperature)}°C</li>
@@ -52,5 +85,5 @@ export default function WeatherSearch() {
         );
     } else {
         return form;
-    }
+    } */
 }
